@@ -1,0 +1,1 @@
+KEEP=1 I=0 NUM_COMMITS=$(git rev-list master | wc -l) git filter-branch --index-filter 'if [[ ${I} -lt $((NUM_COMMITS - KEEP)) ]]; then git rm --cached --ignore-unmatch $1; fi; I=$((I + 1))'

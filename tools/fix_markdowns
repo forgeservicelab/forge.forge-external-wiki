@@ -1,0 +1,11 @@
+# Fix markdown files featched from Redmine
+
+# Remove "[¶](#1_User_guides_User-guides)" from headings #
+# $ cat 2_Userguides.md | sed 's/\[¶\]\(.*\)//'
+
+# Fix attachment links #
+# $ cat 2_Userguides.md | sed 's/attachments\/download\/[0-9]*/files/'
+
+# Search for [projects](https://support.forgeservicelab.fi/projects/
+\[.*\]\(https\:\/\/support\.forgeservicelab\.fi\/.*\)
+
